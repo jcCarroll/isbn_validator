@@ -41,10 +41,6 @@
 # book = "1234dsds#54%$*78jf"
 
 def strip(number)
-    # .gsub! looks a pattern
-    # (/[]/) sets up what to look for
-    # (^) target everything except (\d=digits 0-9, x=the letter x)
-    # after the (,) states what to do with it (""=replace with nothing)
     number.gsub!(/[^\dx]/,"")
 end
 
