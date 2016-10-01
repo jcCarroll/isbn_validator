@@ -44,9 +44,9 @@ def strip(book)
     # (^) target everything except (\d=digits 0-9, x=the letter x)
     # after the (,) states what to do with it (""=replace with nothing)
     book.gsub!(/[^\dx]/,"")
-    if book.length == 10
+    if book.length == 10 || 13
         true
     else
-    book
+        book
     end
 end 
