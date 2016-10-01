@@ -38,15 +38,22 @@
 # checksum = 1
 # isbn = 7421394761
 
-def strip(book)
+# book = "1234dsds#54%$*78jf"
+
+def strip(number)
     # .gsub! looks a pattern
     # (/[]/) sets up what to look for
     # (^) target everything except (\d=digits 0-9, x=the letter x)
     # after the (,) states what to do with it (""=replace with nothing)
-    book.gsub!(/[^\dx]/,"")
-    if book.length == 10 || 13
+    number.gsub!(/[^\dx]/,"")
+end
+
+def valid(isbn)
+    stripper = strip(isbn)
+     if stripper.length == 10
         true
     else
-        book
+        stripper.length == 13
+        true
     end
-end 
+end

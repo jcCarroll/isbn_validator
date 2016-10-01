@@ -13,10 +13,10 @@ class TestISBN <Minitest::Test
     end
 
     def test_isbn_length_10_true
-        assert_equal(true, strip("0-321-14653-0"))
+        assert_equal(true, valid("0-321-14653-0"))
     end
 
     def test_isbn_length_13_true
-        assert_equal(true, strip("978-0-13-149505-0"))
+        assert_equal(true, valid("978-0-13-149505-0"))
     end
 end
