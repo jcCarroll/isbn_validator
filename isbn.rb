@@ -38,6 +38,7 @@
 # checksum = 1
 # isbn = 7421394761
 
-def 
-
+def strip(book)
+    book.gsub!(/[^\dx]/,"")
+    book
 end 
