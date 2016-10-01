@@ -40,10 +40,6 @@
 
 # book = "1234dsds#54%$*78jf"
 
-def strip(number)
-    number.gsub!(/[^\dx]/,"")
-end
-
 def valid(isbn)
     stripper = strip(isbn)
      if stripper.length == 10
@@ -52,4 +48,8 @@ def valid(isbn)
         stripper.length == 13
         true
     end
+end
+
+def strip(number)
+    number.gsub!(/[^\dx]/,"")
 end
