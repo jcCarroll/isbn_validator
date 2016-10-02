@@ -38,8 +38,14 @@
 # checksum = 1
 # isbn = 7421394761
 
-# book = "1234dsds#54%$*78jf"
+# isbn = "0-321-14653-0"
+
+require_relative 'multiplication.rb'
 
 def valid(isbn)
     isbn.gsub!(/[^\dx]/,"")
+    last = isbn[-1]
+    short = isbn.chop
+    multi = multi(short)
+
 end
