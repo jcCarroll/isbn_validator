@@ -20,15 +20,23 @@ class TestISBN <Minitest::Test
     #     assert_equal("032114653", valid("0-321-14653-0"))
     # end
 
-    def test_10_isbn_returns_valid
-        assert_equal("valid", valid("0-321-14653-0"))
-    end
+    # def test_10_isbn_returns_valid
+    #     assert_equal("valid", valid("0-321-14653-0"))
+    # end
 
-    def test_13_isbn_returns_valid
-        assert_equal("valid", valid("978-0-13-149505-0"))
-    end
+    # def test_13_isbn_returns_valid
+    #     assert_equal("valid", valid("978-0-13-149505-0"))
+    # end
 
-    def test_14_isbn_returns_invalid
-        assert_equal("invalid", valid("9768-0-13-149505-0"))
+    # def test_14_isbn_returns_invalid
+    #     assert_equal("invalid", valid("9768-0-13-149505-0"))
+    # end
+
+    # def test__isbn_returns_invalid
+    #     assert_equal("invalid", valid("9768-0-13-149505-0"))
+    # end
+
+    def test_mult_works
+        assert_equal(149162536496481, valid("1234567890"))
     end
 end
