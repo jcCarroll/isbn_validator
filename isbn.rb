@@ -45,8 +45,7 @@ def valid(isbn)
     isbn.gsub!(/[^\dx]/,"")
     last = isbn[-1]
     short = isbn.chop
-    multi = multi(short)
     # if short.length == 9
-multi
+short
 
 end
