@@ -40,7 +40,6 @@
 
 # isbn = "0-321-14653-0"
 
-require_relative 'multiplication.rb'
 
 def valid(isbn)
     isbn.gsub!(/[^\dx]/,"")
