@@ -21,6 +21,6 @@ class TestISBN <Minitest::Test
     # end
 
     def test_is_10_valid
-        assert_equal(true, valid(0-321-14653-0))
+        assert_equal(true, valid("0-321-14653-0"))
     end
 end

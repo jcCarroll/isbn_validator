@@ -41,27 +41,5 @@
 # book = "1234dsds#54%$*78jf"
 
 def valid(isbn)
-    stripper = strip(isbn)
-     if stripper.length == 10
-        validten = ten(stripper)
-    else
-        stripper.length == 13
-        true
-    end
-end
-
-def strip(number)
-    number.gsub!(/[^\dx]/,"")
-end
-
-def ten(number[last])
-    multi = 1
-    last = number.last
-    number.each do |check|
-        check * multi
-
-    if number == last
-        "Valid!"
-    end
-    multi = multi += 1
+    isbn.gsub!(/[^\dx]/,"")
 end
