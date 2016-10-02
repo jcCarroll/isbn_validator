@@ -45,7 +45,12 @@ def valid(isbn)
     isbn.gsub!(/[^\dx]/,"")
     last = isbn[-1]
     short = isbn.chop
-    # if short.length == 9
-short
-
+    if short.length == 9
+        "valid"
+    elsif
+        short.length == 12
+        "valid"
+    else
+        "invalid"
+    end
 end

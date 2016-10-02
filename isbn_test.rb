@@ -16,7 +16,11 @@ class TestISBN <Minitest::Test
     #     assert_equal("032114653x", valid("0-321-14653-x"))
     # end
 
-    def test_number_returns_without_check_digit
-        assert_equal("032114653", valid("0-321-14653-0"))
+    # def test_number_returns_without_check_digit
+    #     assert_equal("032114653", valid("0-321-14653-0"))
+    # end
+
+    def test_9_isbn_returns_valid
+        assert_equal("valid", valid("0-321-14653-0"))
     end
 end
