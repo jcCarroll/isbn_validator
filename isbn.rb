@@ -45,18 +45,4 @@ def valid(isbn)
     isbn.gsub!(/[^\dx]/,"")
     last = isbn[-1]
     short = isbn.chop
-    pos = 1
-    mult = ""
-    if short.length == 9
-        short.split("").each do |value|
-           mult << value.to_i * pos
-           pos = pos += 1
-        end
-        mult
-    elsif
-        short.length == 12
-        "valid"
-    else
-        "invalid"
-    end
 end
