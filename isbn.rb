@@ -40,7 +40,6 @@
 
 
 def valid(isbn)
-    isbn = "0-321-14653-0"
     isbn.gsub!(/[^\dx]/,"")
     last = isbn[-1]
     short = isbn.chop
@@ -49,5 +48,7 @@ def valid(isbn)
     elsif
         isbn.length == 13
         "valid"
+    else
+        "invalid"
     end
 end
