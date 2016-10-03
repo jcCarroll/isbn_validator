@@ -46,5 +46,8 @@ def valid(isbn)
     short = isbn.chop
     if isbn.length == 10
         "valid"
+    elsif
+        isbn.length == 13
+        "valid"
     end
 end
