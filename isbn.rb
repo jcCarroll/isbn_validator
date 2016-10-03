@@ -38,11 +38,13 @@
 # checksum = 1
 # isbn = 7421394761
 
-# isbn = "0-321-14653-0"
-
 
 def valid(isbn)
+    isbn = "0-321-14653-0"
     isbn.gsub!(/[^\dx]/,"")
     last = isbn[-1]
     short = isbn.chop
+    if isbn.length == 10
+        "valid"
+    end
 end
