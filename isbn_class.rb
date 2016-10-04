@@ -6,12 +6,6 @@ def valid_isbn?(isbn)
     else
         false
     end
-    # sum = 0
-    # ten_digit_array = isbn.chars.map!(&:to_i) # splits the string into an array of individual characters as intigers
-    # ten_digit_array.each_with_index do |value, index| # iterates through the array setting the value and index position to a variable
-    #     break if index == 9 # stops the do loop at position 9 of the arrya
-    #     sum += (index + 1) * value # sets sum to the index position + 1 * the current value
-    # end
 end
 
 def valid_isbn_ten_length?(isbn)
@@ -20,6 +14,17 @@ end
 
 def valid_isbn_check_sum?(isbn)
     isbn[-1] == "7"
+    sum = 0
+    ten_digit_array = isbn.chars.map!(&:to_i) # splits the string into an array of individual characters as intigers
+    ten_digit_array.each_with_index do |value, index| # iterates through the array setting the value and index position to a variable
+        break if index == 9 # stops the do loop at position 9 of the arrya
+        sum += (index + 1) * value # sets sum to the index position + 1 * the current value
+    end
+    if sum % 11 == ten_digit_array.last
+        true
+    else
+        false
+    end
 end
 
 def remove_spaces(isbn)
