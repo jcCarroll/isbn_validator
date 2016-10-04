@@ -1,9 +1,14 @@
 def valid_isbn?(isbn)
-    isbn = remove_unwanted(isbn) # passes to remove_unwanted function   
+    isbn = remove_spaces(isbn) # passes to remove_spaces function
+    isbn = remove_dashes(isbn) # passes to remove_dashes function
     isbn.length == 10 # checks if length of isbn is 10 digits and returns true or false
 end
 
-def remove_unwanted(isbn)
+def remove_spaces(isbn)
     isbn = isbn.delete(" ") # delete spaces
+    isbn = isbn.delete("-") # delete dashes
+end
+
+def remove_dashes(isbn)
     isbn = isbn.delete("-") # delete dashes
 end
