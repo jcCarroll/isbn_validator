@@ -1,3 +1,3 @@
-def valid_isbn?
-
+def valid_isbn?(isbn)
+    true
 end
