@@ -1,7 +1,7 @@
 def valid_isbn?(isbn)
     isbn = remove_spaces(isbn) # passes to remove_spaces function
     isbn = remove_dashes(isbn) # passes to remove_dashes function
-    if isbn.length == 10 && isbn[-1] == "7"# checks if length of isbn is 10 digits and returns true or false
+    if length(isbn) && valid_isbn_check_sum?(isbn) # checks if length of isbn is 10 digits and returns true or false
         true
     else
         false
@@ -14,7 +14,13 @@ def valid_isbn?(isbn)
     # end
 end
 
+def length(isbn)
+    isbn.length == 10
+end
+
 def valid_isbn_check_sum?(isbn)
+    isbn[-1] == "7"
+end
 
 def remove_spaces(isbn)
     isbn = isbn.delete(" ") # delete spaces
