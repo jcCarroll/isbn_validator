@@ -45,10 +45,15 @@ def valid(isbn)
     short = isbn.chop
     if isbn.length == 10
         "valid"
+        multi10(isbn)
     elsif
         isbn.length == 13
         "valid"
     else
         "invalid"
     end
+end
+
+def multi10(digits)
+    digits.to_i
 end
