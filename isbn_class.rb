@@ -41,7 +41,7 @@ end
                     def valid_isbn_thirteen_check_sum?(isbn)
                         sum = 0 # sets value of sum to 0
                         thirteen_digit_array = isbn.chars.map!(&:to_i) # splits the string into an array of individual characters as intigers
-                        thirteen_digit_array.each.with_index do |value, index| # iterates through the array setting the value and index position to a variable
+                        thirteen_digit_array.each_with_index do |value, index| # iterates through the array setting the value and index position to a variable
                             break if index == 12 # stops the do loop at position 12 of the array
                             if index % 2 == 0 # looks to see if the index modulo 2 is equal to 0
                                 sum += value * 1 # sets sum equal to the sum plus the value times 1
