@@ -28,12 +28,16 @@ class TestISBN < Minitest::Test
     end
 
                 def test_valid_isbn_thirteen_with_dashes_returns_true
-                    assert_equal(true, valid_isbn?("0-471-95869-7"))
+                    assert_equal(true, valid_isbn?("9-780-4700-5902-9"))
                 end
 
-    def test_valid_isbn_with_dashes_and_spaces_returns_true
+    def test_valid_isbn_ten_with_dashes_and_spaces_returns_true
         assert_equal(true, valid_isbn?("0-471-958 69 7"))
     end
+
+                def test_valid_isbn_thirteen_with_dashes_and_spaces_returns_true
+                    assert_equal(true, valid_isbn?("9-780-4700 5902 9"))
+                end
 
     def test_invalid_isbn_10_returns_false
         assert_equal(false, valid_isbn?("0471958699"))
