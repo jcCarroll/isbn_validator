@@ -13,9 +13,6 @@ def valid_isbn_ten_length?(isbn)
 end
 
 def valid_isbn_check_sum?(isbn)
-    # if isbn[-1] == "x"
-    #     isbn[-1] = "10"
-    # end
     sum = 0
     ten_digit_array = isbn.chars.map!(&:to_i) # splits the string into an array of individual characters as intigers
     ten_digit_array.each_with_index do |value, index| # iterates through the array setting the value and index position to a variable
