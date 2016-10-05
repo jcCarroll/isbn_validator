@@ -1,7 +1,7 @@
 def valid_isbn?(isbn)
     isbn = remove_spaces(isbn) # passes to remove_spaces function
     isbn = remove_dashes(isbn) # passes to remove_dashes function
-    if valid_isbn_ten_length?(isbn) && valid_isbn_check_sum?(isbn) # checks if length of isbn is 10 digits and returns true or false
+    if valid_isbn_ten_length?(isbn) && valid_isbn_ten_check_sum?(isbn) # checks if length of isbn is 10 digits and returns true or false
         true
     elsif
         valid_isbn_thirteen_length?(isbn)
@@ -19,7 +19,7 @@ end
                         isbn.length == 13 # checks to see if isbn length is equal to 13
                     end
 
-def valid_isbn_check_sum?(isbn)
+def valid_isbn_ten_check_sum?(isbn)
     sum = 0
     ten_digit_array = isbn.chars.map!(&:to_i) # splits the string into an array of individual characters as intigers
     ten_digit_array.each_with_index do |value, index| # iterates through the array setting the value and index position to a variable
