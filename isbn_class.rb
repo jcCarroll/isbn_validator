@@ -48,19 +48,16 @@ end
                             else
                                 sum += value * 3 # sets sum equal to the sum plus the value times 3
                             end
-                            puts "sum = #{sum}"
+                        end
                         pre_check_sum = sum % 10 # sets pre_check_sum equal to sum modulo 10
                         check_sum = 10 - pre_check_sum # sets check_sum equal to ten minus pre_check_sum
                         end_check_sum = check_sum % 10
                         end_check_sum_string = end_check_sum.to_s
                             if end_check_sum_string == isbn[-1] # looks to see if check_sum is equal to position 12 of thirteen_digit_array and returns true or false
-                                puts "end_check_sum_string = #{end_check_sum_string}"
-                                puts "isbn[-1] = #{isbn[-1]}"
                                 true
                             else
                                 false
                             end
-                        end
                     end
 
 def remove_spaces(isbn)
