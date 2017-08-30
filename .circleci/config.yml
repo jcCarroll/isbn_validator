@@ -36,13 +36,13 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
         
-      # Database setup
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
+      # # Database setup
+      # - run: bundle exec rake db:create
+      # - run: bundle exec rake db:schema:load
 
       # run tests!
       - run:
-          name: run tests
+          name: isbn_class_test.rb
           command: |
             mkdir /tmp/test-results
             TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
