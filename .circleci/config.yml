@@ -16,15 +16,15 @@ jobs:
 
       - run:
           name: install dependencies
+          dependencies:
+            pre:
+            - gem install bundler --pre
           command: |
             bundle install
 
       # run tests!
       - run:
           name: run tests
-          dependencies:
-            pre:
-            - gem install bundler --pre
           command: |
             mkdir /tmp/test-results
             TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
