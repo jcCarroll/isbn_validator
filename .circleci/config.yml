@@ -8,7 +8,7 @@ jobs:
       - checkout
 
       # Bundle install dependencies
-      - run: bundle install Gemfile
+      - run: bundle install ./Gemfile
 
       # Save test results for timing analysis
       - store_test_results:
