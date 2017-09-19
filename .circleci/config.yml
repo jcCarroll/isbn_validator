@@ -13,7 +13,7 @@ jobs:
       - type: cache-restore
         key: isbn_validator-{{ checksum "Gemfile.lock" }}
       # Bundle install dependencies
-      - run: bundle install --path vendor/bundle
+      - run: bundle install --path ~/isbn_validator
       # Store bundle cache
       - type: cache-save
         key: sinatra-demo-{{ checksum "Gemfile.lock" }}
