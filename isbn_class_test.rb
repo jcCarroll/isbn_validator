@@ -1,5 +1,6 @@
 require "minitest/autorun"
 require_relative "isbn_class.rb"
+require "minitest/ci"
 
 class TestISBN < Minitest::Test
 
